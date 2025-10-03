@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .heading-main {
+    @apply text-4xl md:text-5xl font-bold mb-4 text-gray-900 tracking-tight;
+  }
+  .heading-section {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-gray-800 tracking-tight;
+  }
+  .input-custom {
+    @apply border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-400 focus:border-blue-400 outline-none transition-all duration-200 bg-white text-gray-900;
+  }
+  .card-custom {
+    @apply border-none rounded-xl shadow-xl bg-white p-6 transition-transform duration-300 hover:shadow-2xl hover:-translate-y-1;
+  }
+  .card-list {
+    @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8;
+  }
+  .btn-custom {
+    @apply rounded-full px-6 py-2 font-semibold transition-all duration-300;
+  }
+
+  .btn-primary-custom {
+    @apply bg-blue-600 border-blue-600 text-white hover:bg-blue-800 hover:border-blue-800;
+  }
+
+  .btn-secondary-custom {
+    @apply bg-gray-200 border-gray-200 text-gray-800 hover:bg-gray-300 hover:border-gray-400;
+  }
+
+  .btn-success-custom {
+    @apply bg-green-500 border-green-500 text-white hover:bg-green-700 hover:border-green-700;
+  }
+
+  .btn-danger-custom {
+    @apply bg-red-500 border-red-500 text-white hover:bg-red-700 hover:border-red-700;
+  }
+
+  .card-custom {
+    @apply border-none rounded-lg shadow-lg transition-transform duration-300;
+  }
+
+  .card-custom:hover {
+    @apply -translate-y-1;
+  }
+
+  .footer-custom {
+    @apply bg-gray-800 text-white py-10 mt-10;
+  }
+
+  .footer-custom a {
+    @apply text-white no-underline;
+  }
+
+  .footer-custom a:hover {
+    @apply underline;
+  }
+  .section-bg {
+    @apply bg-gradient-to-br from-blue-50 to-purple-50;
+  }
+  .shadow-hover {
+    @apply transition-shadow duration-300 hover:shadow-2xl;
+  }
+  .rounded-xl {
+    border-radius: 1rem;
+  }
+}
